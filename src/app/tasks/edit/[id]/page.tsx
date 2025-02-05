@@ -50,7 +50,7 @@ const EditTask = () => {
 
     const fetchTask = async () => {
       console.log("Starting fetch for taskId:", taskId);
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/tasks/update/task?id=${taskId}`);
+      const response = await fetch(`/api/tasks/update/task?id=${taskId}`);
       const data = await response.json();
       console.log("Response data:", data);
     };

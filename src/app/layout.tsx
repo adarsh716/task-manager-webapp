@@ -14,8 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <AuthProvider>
+    <html>
+      <body>
+      <AuthProvider>
       <TaskProvider>{children}</TaskProvider>
     </AuthProvider>
+      </body>
+    </html>
   );
 }

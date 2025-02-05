@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import User from "@/lib/models/User";
 import { connectDB } from "@/lib/mongodb";
 
-const JWT_SECRET = "Arjun";
+const JWT_SECRET = process.env.JWT_SECRET || "default_secret";
 
 export async function POST(req: Request) {
   try {

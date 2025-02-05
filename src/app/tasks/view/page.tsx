@@ -222,7 +222,7 @@ const TaskList = () => {
                         <TableRow key={index}>
                           <TableCell>{task.title}</TableCell>
                           <TableCell>{task.description}</TableCell>
-                          <TableCell>{task.dueDate.toLocaleDateString()}</TableCell>
+                          <TableCell>{new Date(task.dueDate).toLocaleDateString()}</TableCell>
                           <TableCell>{task.priority}</TableCell>
                           <TableCell>
                             {task.isComplete ? "Completed" : "Pending"}

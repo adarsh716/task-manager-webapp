@@ -94,19 +94,6 @@ const Register = () => {
           >
             Task Manager
           </Typography>
-          <Typography
-            variant="body1"
-            align="center"
-            gutterBottom
-            sx={{
-              color: "#333",
-              mb: { xs: 3, sm: 4 },
-              fontSize: { xs: "1rem", sm: "1.2rem" },
-            }}
-          >
-            Create your account to report and find lost items
-          </Typography>
-
           <Box
             component="form"
             onSubmit={handleSubmit(onSubmit)}

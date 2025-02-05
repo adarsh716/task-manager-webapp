@@ -66,7 +66,7 @@ const TaskList = () => {
     if (selectedTaskId) {
       try {
         const response = await fetch(
-          `/api/tasks/delete/task?id=${selectedTaskId}`,
+          `${process.env.NEXT_PUBLIC_API_URL}/api/tasks/delete/task?id=${selectedTaskId}`,
           {
             method: "DELETE",
           }
@@ -88,7 +88,7 @@ const TaskList = () => {
 
   const handleCompleteTask = async (taskId: string) => {
     try {
-      const response = await fetch(`/api/tasks/complete/task?id=${taskId}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/tasks/complete/task?id=${taskId}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ isComplete: true }),
